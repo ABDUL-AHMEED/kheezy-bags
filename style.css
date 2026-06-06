@@ -271,23 +271,4 @@ body {
     .nav-links {
         gap: 15px;
     }
-    .site-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #ffffff; /* Or whatever color matches your site header */
-    border-top: 1px solid #eaeaea;
-    margin-top: 40px;
-    font-size: 14px;
-    color: #555;
-}
-
-.site-footer a {
-    color: #4b0082; /* Change this to match your main theme color (like purple) */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.site-footer a:hover {
-    text-decoration: underline;
-}
 }
