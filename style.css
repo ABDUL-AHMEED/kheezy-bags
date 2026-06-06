@@ -19,17 +19,27 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #4A154B; /* Rich Luxury Deep Purple */
-    padding: 18px 5%;
+    padding: 12px 5%; /* Adjusted padding slightly for perfect logo alignment */
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
+/* Updated Logo Image Styling */
 .logo {
-    font-size: 24px;
-    font-weight: 800;
-    letter-spacing: 3px;
-    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 55px; /* Perfect height to ensure text readability without stretching */
+    width: auto;   /* Maintains original aspect ratio perfectly */
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.02); /* Subtle luxurious hover animation */
 }
 
 .nav-links {
@@ -290,7 +300,11 @@ body {
     .navbar {
         flex-direction: column;
         gap: 12px;
-        padding: 15px;
+        padding: 12px;
+    }
+    /* Controls logo size strictly on mobile phones */
+    .logo img {
+        height: 48px; 
     }
     .nav-links {
         gap: 15px;
