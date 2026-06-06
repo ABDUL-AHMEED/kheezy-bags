@@ -250,6 +250,30 @@ body {
     cursor: pointer;
 }
 
+/* --- DEVELOPER FOOTER STYLING --- */
+.site-footer {
+    text-align: center;
+    padding: 25px 20px;
+    background-color: #ffffff;
+    border-top: 1px solid #ebdff0;
+    margin-top: 60px;
+    font-size: 14px;
+    color: #555555;
+    width: 100%;
+}
+
+.site-footer a {
+    color: #4A154B; /* Matches your brand luxury deep purple */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+    color: #8A2387; /* Changes smoothly on hover */
+}
+
 /* CRITICAL RESPONSIVE MEDIA QUERY */
 @media (max-width: 768px) {
     /* Locks products into 2 columns on phones instead of 1 huge card */
@@ -270,5 +294,9 @@ body {
     }
     .nav-links {
         gap: 15px;
+    }
+    .site-footer {
+        margin-top: 40px;
+        font-size: 13px;
     }
 }
