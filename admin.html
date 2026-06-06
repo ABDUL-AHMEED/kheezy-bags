@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Add New Bag</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .form-container { max-width: 500px; margin: 50px auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; }
+        .form-group input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        .submit-btn { background: #ff4a5a; color: white; border: none; padding: 12px; width: 100%; border-radius: 4px; cursor: pointer; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <button class="back-btn" onclick="window.location.href='index.html'">← Storefront</button>
+        <h1>Admin Panel</h1>
+        <div></div>
+    </header>
+
+    <div class="form-container">
+        <h2>Upload New Bag</h2>
+        <br>
+        <form id="product-form">
+            <div class="form-group">
+                <label for="bag-name">Bag Name</label>
+                <input type="text" id="bag-name" required placeholder="e.g., Luxury Channel Tote">
+            </div>
+            <div class="form-group">
+                <label for="bag-price">Price (₦)</label>
+                <input type="text" id="bag-price" required placeholder="e.g., 55,000">
+            </div>
+            <div class="form-group">
+                <label for="bag-image">Image URL (or upload image path)</label>
+                <input type="text" id="bag-image" required placeholder="Paste image URL here">
+            </div>
+            <button type="submit" class="submit-btn">Add Product to Store</button>
+        </form>
+    </div>
+
+    <script>
+        // Quick script to handle the admin form submission
+        document.getElementById('product-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('bag-name').value;
+            const price = document.getElementById('bag-price').value;
+            const image = document.getElementById('bag-image').value;
+            
+            const newProduct = { name, price, image };
+            
+            // Get existing products from localStorage, or start a new array
+            let products = JSON.parse(localStorage.getItem('storedProducts')) || [];
+            products.push(newProduct);
+            
+            // Save back to localStorage
+            localStorage.setItem('storedProducts', JSON.stringify(products));
+            
+            alert('Product added successfully!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

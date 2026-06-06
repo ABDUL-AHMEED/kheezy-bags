@@ -1,0 +1,274 @@
+/* style.css */
+
+/* Base Brand Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #faf8fb; /* Tinted off-white background */
+    color: #2b102e;
+}
+
+/* Elegant Purple Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4A154B; /* Rich Luxury Deep Purple */
+    padding: 18px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #e2cce4;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 3px;
+}
+
+/* Beautiful Banner for Home Page */
+.hero-section {
+    background: linear-gradient(rgba(74, 21, 75, 0.45), rgba(43, 16, 46, 0.7)), 
+                url('https://images.unsplash.com/photo-1547949003-9792a18a2601?w=1200') no-repeat center center/cover;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-content h2 {
+    font-size: 44px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 17px;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    color: #f3e8f4;
+}
+
+.explore-btn {
+    background-color: #ffffff;
+    color: #4A154B;
+    border: none;
+    padding: 14px 35px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.explore-btn:hover {
+    transform: scale(1.03);
+}
+
+/* Main Layout Wrapper */
+.page-container {
+    padding: 60px 5%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-title h2 {
+    font-size: 28px;
+    color: #4A154B;
+    margin-bottom: 8px;
+}
+
+/* Gallery: 3 columns on PC, 2 columns on Mobile */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #ebdff0;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-wrapper {
+    width: 100%;
+    height: 260px;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.product-info h3 {
+    font-size: 15px;
+    color: #2b102e;
+    margin-bottom: 6px;
+}
+
+.price {
+    font-weight: 700;
+    color: #8A2387;
+    margin-bottom: 12px;
+}
+
+.whatsapp-order-btn {
+    display: block;
+    text-decoration: none;
+    background-color: #25D366; /* Official WhatsApp Green */
+    color: white;
+    padding: 10px 0;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+/* Service Styling */
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.service-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid #4A154B;
+    border-top: 1px solid #ebdff0;
+    border-right: 1px solid #ebdff0;
+    border-bottom: 1px solid #ebdff0;
+}
+
+.service-card h3 {
+    color: #4A154B;
+    margin-bottom: 10px;
+}
+
+/* Contact Styling */
+.contact-box {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #ebdff0;
+}
+
+.direct-wa-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #075E54;
+    color: white;
+    padding: 14px;
+    font-weight: 700;
+    border-radius: 4px;
+}
+
+.divider {
+    text-align: center;
+    margin: 25px 0;
+    font-size: 12px;
+    color: #a38fa6;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+}
+
+.send-btn {
+    background-color: #4A154B;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* CRITICAL RESPONSIVE MEDIA QUERY */
+@media (max-width: 768px) {
+    /* Locks products into 2 columns on phones instead of 1 huge card */
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .image-wrapper {
+        height: 180px; /* Shortens image heights nicely on small screens */
+    }
+    .product-info h3 {
+        font-size: 13px;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px;
+    }
+    .nav-links {
+        gap: 15px;
+    }
+}
