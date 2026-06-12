@@ -1,4 +1,4 @@
-// script.js
+// script.js - Complete Supercharged Engine
 const allBags = [
     // --- GROUP 1: ADORN BAG SERIES ---
     { id: "adorn-black", name: "Adorn Bag (Black croc) 💜", price: 11000, desc: "Slay effortlessly with our flagship layout.", image: "pics1.jpg", tags: "black dark adorn crocodile skin textured leather luxury bag hand bags shoulder classy premium quality arm candy hot chic corporate office designer" },
@@ -26,16 +26,16 @@ const allBags = [
     // --- GROUP 5: PANDORA BAG SERIES ---
     { id: "pandora-red", name: "Pandora Bag (Bright Red) 💜", price: 11000, desc: "Curvy, structured profile that's giving all layout aesthetics.", image: "pics16.jpg", tags: "red bright red crimson pandora small handle shoulder mini elegant bag bags curve curved structured cute aesthetic cross-body crossbody small purse" },
     { id: "pandora-black", name: "Pandora Bag (Classic Black) 💜", price: 11000, desc: "Curvy, structured profile that's giving all layout aesthetics.", image: "pics17.jpg", tags: "black dark sleek pandora small handle shoulder mini elegant bag bags curve curved structured cute aesthetic cross-body crossbody small purse corporate night out" },
-    { id: "pandora-pink", name: "Pandora Bag (Royal Blue) 💜", price: 11000, desc: "Curvy, structured profile that's giving all layout aesthetics.", image: "pics18.jpg", tags: "blue royal blue deep ocean navy pandora small handle shoulder mini elegant bag bags curve curved structured cute aesthetic cross-body crossbody small purse" },
-    { id: "pandora-blue", name: "Pandora Bag (light pink) 💜", price: 11000, desc: "Curvy, structured profile that's giving all layout aesthetics.", image: "pics19.jpg", tags: "pink light pink rose peach pastel pandora small handle shoulder mini elegant bag bags curve curved structured cute aesthetic cross-body crossbody small purse girly" },
+    { id: "pandora-pink", name: "Pandora Bag (Light Pink) 💜", price: 11000, desc: "Curvy, structured profile that's giving all layout aesthetics.", image: "pics18.jpg", tags: "pink light pink rose peach pastel pandora small handle shoulder mini elegant bag bags curve curved structured cute aesthetic cross-body crossbody small purse girly" },
+    { id: "pandora-blue", name: "Pandora Bag (Royal Blue) 💜", price: 11000, desc: "Curvy, structured profile that's giving all layout aesthetics.", image: "pics19.jpg", tags: "blue royal blue deep ocean navy pandora small handle shoulder mini elegant bag bags curve curved structured cute aesthetic cross-body crossbody small purse" },
 
     // --- GROUP 6: ZAINNY BAG SERIES ---
-    { id: "zainny-orange", name: "Zainny Bag (Orange) 💜", price: 8000, desc: "Small in size, massive on general style statement.", image: "pics24.jpg", tags: "orange bright smooth ring gold handle zainny mini clutch purse bag bags envelope small tiny micro purse underarm pochette" },
-    { id: "zainny-yellow", name: "Zainny Bag (Yellow) 💜", price: 8000, desc: "Small in size, massive on general style statement.", image: "pics20.jpg", tags: "yellow bright pastel smooth ring gold handle zainny mini clutch purse bag bags envelope small tiny micro purse underarm pochette lemon" },
-    { id: "zainny-black", name: "Zainny Bag (Classic Black) 💜", price: 8000, desc: "Small in size, massive on general style statement.", image: "pics25.jpg", tags: "black dark classic smooth ring gold handle zainny mini clutch purse bag bags envelope small tiny micro purse underarm pochette simple" },
-    { id: "zainny-green", name: "Zainny Bag (Classic pink) 💜", price: 8000, desc: "Small in size, massive on general style statement.", image: "pics23.jpg", tags: "pink light pink rose peach pastel pandora small handle shoulder mini elegant bag bags curve curved structured cute aesthetic cross-body crossbody small purse girly" },
-    { id: "zainny-burgundy", name: "Zainny Bag (Burgundy Red) 💜", price: 8000, desc: "Small in size, massive on general style statement.", image: "pics21.jpg", tags: "burgundy wine crimson dark red red smooth ring gold handle zainny mini clutch purse bag bags envelope small tiny micro purse underarm pochette maroon" },
-    { id: "zainny-cream", name: "Zainny Bag (Cream/Beige) 💜", price: 8000, desc: "Small in size, massive on general style statement.", image: "pics22.jpg", tags: "cream beige offwhite white off-white smooth ring gold handle zainny mini clutch purse bag bags envelope small tiny micro purse underarm pochette light" },
+    { id: "zainny-orange", name: "Zainny Bag (Orange) 💜", price: 8000, desc: "Small in size, massive on general style statement.", image: "pics20.jpg", tags: "orange bright smooth ring gold handle zainny mini clutch purse bag bags envelope small tiny micro purse underarm pochette" },
+    { id: "zainny-yellow", name: "Zainny Bag (Yellow) 💜", price: 8000, desc: "Small in size, massive on general style statement.", image: "pics21.jpg", tags: "yellow bright pastel smooth ring gold handle zainny mini clutch purse bag bags envelope small tiny micro purse underarm pochette lemon" },
+    { id: "zainny-black", name: "Zainny Bag (Classic Black) 💜", price: 8000, desc: "Small in size, massive on general style statement.", image: "pics22.jpg", tags: "black dark classic smooth ring gold handle zainny mini clutch purse bag bags envelope small tiny micro purse underarm pochette simple" },
+    { id: "zainny-green", name: "Zainny Bag (Dark Green croc) 💜", price: 8000, desc: "Small in size, massive on general style statement.", image: "pics23.jpg", tags: "green dark green emerald croc crocodile texture skin ring gold handle zainny mini clutch purse bag bags envelope small tiny micro purse underarm pochette forest" },
+    { id: "zainny-burgundy", name: "Zainny Bag (Burgundy Red) 💜", price: 8000, desc: "Small in size, massive on general style statement.", image: "pics24.jpg", tags: "burgundy wine crimson dark red red smooth ring gold handle zainny mini clutch purse bag bags envelope small tiny micro purse underarm pochette maroon" },
+    { id: "zainny-cream", name: "Zainny Bag (Cream/Beige) 💜", price: 8000, desc: "Small in size, massive on general style statement.", image: "pics25.jpg", tags: "cream beige offwhite white off-white smooth ring gold handle zainny mini clutch purse bag bags envelope small tiny micro purse underarm pochette light" },
 
     // --- GROUP 7: LAPTOP BAG SERIES ---
     { id: "laptop-navy", name: "Executive Laptop Bag (Navy Blue) 💜", price: 25000, desc: "Sleek spatial accommodation for laptops, devices, and diaries.", image: "pics26.jpg", tags: "blue navy blue dark blue corporate laptop bags executive office case handle leather briefcase documents professional computer macbook ipad work workplace large big structured device" },
@@ -72,7 +72,7 @@ function displayProducts(productsToRender) {
         const card = document.createElement("div");
         card.className = "product-card";
         card.innerHTML = `
-            <div class="image-wrapper"><img src="${bag.image}" alt="${bag.name}" onerror="this.onerror=null; this.src='logo.jpg.jpeg';"></div>
+            <div class="image-wrapper"><img src="${bag.image}" alt="${bag.name}" onerror="this.onerror=null; this.src='logo.jpg';"></div>
             <div class="product-info">
                 <div>
                     <h3>${bag.name}</h3>
@@ -133,37 +133,28 @@ function refreshStickyCartBar() {
 }
 
 function filterProducts() {
-    // Clean out special characters or punctuation, convert to lower case
     const cleanInput = document.getElementById("shopSearch").value
         .toLowerCase()
         .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()🛍️🔍💬]/g, " ");
 
-    // Split entry by spaces into individual search terms
     const rawWords = cleanInput.split(" ").filter(word => word.trim() !== "");
-
-    // Ignore common search filler words that don't help filtering
     const fillerWords = ["i", "want", "to", "buy", "a", "the", "and", "for", "with", "show", "me", "some"];
     const searchWords = rawWords.filter(word => !fillerWords.includes(word));
 
-    // Show everything if field is reset or empty
     if (searchWords.length === 0) {
         displayProducts(allBags);
         return;
     }
 
-    // Evaluate catalog items against search phrases
     const matches = allBags.filter(bag => {
         const bagName = bag.name.toLowerCase();
         const bagTags = bag.tags.toLowerCase();
         const bagDesc = bag.desc.toLowerCase();
 
         return searchWords.every(word => {
-            // Check matching target keywords directly
             if (bagName.includes(word) || bagTags.includes(word) || bagDesc.includes(word)) {
                 return true;
             }
-
-            // Fallback checking to chop trailing plural markers
             if (word.endsWith('s') && word.length > 2) {
                 const singularWord = word.slice(0, -1);
                 if (bagName.includes(singularWord) || bagTags.includes(singularWord) || bagDesc.includes(singularWord)) {
@@ -177,5 +168,28 @@ function filterProducts() {
     displayProducts(matches);
 }
 
-// Fire initial grid build routine
+function checkoutToWhatsApp() {
+    let activeTotalQty = 0;
+    let activeTotalPrice = 0;
+    let messageText = "Hello Kheezy Bags, I want to order:\n\n";
+
+    for (let key in shoppingCart) {
+        let item = shoppingCart[key];
+        messageText += `🛍️ *${item.name}*\n   Qty: ${item.qty} | Price: ₦${(item.price * item.qty).toLocaleString()}\n\n`;
+        activeTotalQty += item.qty;
+        activeTotalPrice += (shoppingCart[key].price * shoppingCart[key].qty);
+    }
+
+    messageText += `*Total Items:* ${activeTotalQty}\n`;
+    messageText += `*Grand Total:* ₦${activeTotalPrice.toLocaleString()}\n\n`;
+    messageText += "Please confirm my order and send payment details! ✨";
+
+    const encodedMessage = encodeURIComponent(messageText);
+    
+    // Your actual number cleaned up for the script
+    const whatsappNumber = "2348133359191"; 
+
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
+}
+// Initial Grid Load
 displayProducts(allBags);
