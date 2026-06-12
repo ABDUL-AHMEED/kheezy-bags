@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery & Shop - Kheeyz Bags</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Gallery/Shop - Kheezy Bags</title>
     <link rel="icon" type="image/jpeg" href="logo.jpg.jpeg">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="navbar">
+     <header class="navbar">
         <div class="logo">KHEEYZ BAGS</div>
         <nav class="nav-links">
             <a href="index.html">Home</a>
@@ -19,6 +19,7 @@
         </nav>
     </header>
 
+
     <section class="page-container">
         <div class="page-title">
             <h2>Our Gallery & Collection</h2>
@@ -26,11 +27,12 @@
         </div>
 
         <div class="search-container">
-            <input type="text" id="shopSearch" onkeyup="filterProducts()" placeholder="🔍 Search bags (e.g., croc, red, tote, zainny, adorn)...">
+            <input type="text" id="shopSearch" oninput="filterProducts()" placeholder="Search bags by color, style, material, vibe... 🔍">
         </div>
 
-        <main class="product-grid" id="productGrid"></main>
-    </section>
+        <div class="product-grid" id="productGrid">
+            </div>
+    </main>
 
     <div class="floating-cart" id="floatingCart" style="display: none;">
         <div class="cart-details">
@@ -38,10 +40,6 @@
         </div>
         <button class="checkout-btn" onclick="checkoutToWhatsApp()">Checkout on WhatsApp 💬</button>
     </div>
-
-    <footer class="site-footer">
-        <p>Designed & Built by <a href="https://wa.me/2349133125043?text=Hi,%20I%20saw%20the%20Kheeyz%20Bags%20site%20and%20want%20to%20inquire%20about%20a%20website!" target="_blank">Abdul-ahmeed</a></p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
