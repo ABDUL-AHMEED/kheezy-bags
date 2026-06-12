@@ -11,6 +11,7 @@
 body {
     background-color: #faf8fb; /* Tinted off-white background */
     color: #2b102e;
+    padding-bottom: 90px;
 }
 
 /* Elegant Purple Navbar */
@@ -53,7 +54,7 @@ body {
     padding-bottom: 3px;
 }
 
-/* Beautiful Banner for Home Page */
+/* KEEPING EXACTLY AS YOU WANTED: Beautiful Banner for Home Page */
 .hero-section {
     background: linear-gradient(rgba(74, 21, 75, 0.45), rgba(43, 16, 46, 0.7)), 
                 url('https://images.unsplash.com/photo-1547949003-9792a18a2601?w=1200') no-repeat center center/cover;
@@ -64,6 +65,15 @@ body {
     text-align: center;
     color: white;
     padding: 0 20px;
+}
+
+.hero-content .sub-title {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #ebdff0;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
 }
 
 .hero-content h2 {
@@ -114,7 +124,32 @@ body {
     margin-bottom: 8px;
 }
 
-/* Gallery: 3 columns on PC, 2 columns on Mobile */
+.page-title p {
+    font-size: 15px;
+    color: #776579;
+}
+
+/* Gallery Shop Items Filter Setup */
+.search-container {
+    max-width: 500px;
+    margin: 0 auto 40px auto;
+}
+
+#shopSearch {
+    width: 100%;
+    padding: 14px 20px;
+    border: 2px solid #ebdff0;
+    border-radius: 30px;
+    font-size: 15px;
+    outline: none;
+    background-color: #ffffff;
+}
+
+#shopSearch:focus {
+    border-color: #4A154B;
+}
+
+/* Gallery Grid Layout */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -144,12 +179,23 @@ body {
 .product-info {
     padding: 15px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
 }
 
 .product-info h3 {
-    font-size: 15px;
+    font-size: 16px;
     color: #2b102e;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
+}
+
+.product-desc {
+    font-size: 13px;
+    color: #776579;
+    margin-bottom: 8px;
+    font-style: italic;
 }
 
 .price {
@@ -158,25 +204,185 @@ body {
     margin-bottom: 12px;
 }
 
-.whatsapp-order-btn {
-    display: block;
-    text-decoration: none;
-    background-color: #25D366; /* Official WhatsApp Green */
+.cart-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.add-btn {
+    background-color: #4A154B;
     color: white;
-    padding: 10px 0;
+    border: none;
+    padding: 10px 16px;
     font-size: 13px;
     font-weight: 700;
     border-radius: 4px;
+    cursor: pointer;
     text-transform: uppercase;
+    width: 100%;
 }
 
-/* Service Styling */
-.services-list {
+.qty-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: 1px solid #ebdff0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.qty-btn {
+    background-color: #f3e8f4;
+    border: none;
+    color: #4A154B;
+    width: 35px;
+    height: 35px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.qty-number {
+    font-weight: 700;
+}
+
+/* Floating Shop Checkout Bar */
+.floating-cart {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4A154B;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    z-index: 2000;
+    width: 90%;
+    max-width: 600px;
+}
+
+.checkout-btn {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Original Split Contact Page Layout */
+.contact-split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 30px;
+    background: #ffffff;
+    border: 1px solid #ebdff0;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.contact-info-panel {
+    background-color: #2b102e;
+    color: #ffffff;
+    padding: 40px 30px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    justify-content: center;
 }
 
+.contact-info-panel h3 {
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: #ebdff0;
+    border-bottom: 1px dashed #631d64;
+    padding-bottom: 10px;
+}
+
+.info-item-row {
+    margin-bottom: 20px;
+}
+
+.info-item-row strong {
+    display: block;
+    font-size: 13px;
+    color: #e2cce4;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+}
+
+.info-item-row p, .info-item-row a {
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.info-item-row a:hover {
+    text-decoration: underline;
+}
+
+.contact-form-panel {
+    padding: 40px 30px;
+}
+
+.contact-form-panel h3 {
+    color: #4A154B;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.form-field-group {
+    margin-bottom: 15px;
+}
+
+.form-field-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #2b102e;
+}
+
+.form-field-group input, .form-field-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ebdff0;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    background: #faf8fb;
+}
+
+.form-field-group input:focus, .form-field-group textarea:focus {
+    border-color: #4A154B;
+}
+
+.form-submit-btn {
+    background-color: #4A154B;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.form-submit-btn:hover {
+    background-color: #631d64;
+}
+
+/* Service Lookbook Configurations */
 .service-card {
     background: white;
     padding: 25px;
@@ -185,6 +391,7 @@ body {
     border-top: 1px solid #ebdff0;
     border-right: 1px solid #ebdff0;
     border-bottom: 1px solid #ebdff0;
+    margin-bottom: 20px;
 }
 
 .service-card h3 {
@@ -192,65 +399,37 @@ body {
     margin-bottom: 10px;
 }
 
-/* Contact Styling */
-.contact-box {
-    max-width: 500px;
-    margin: 0 auto;
-    background: white;
-    padding: 30px;
+.lookbook-title {
+    text-align: center;
+    margin: 50px 0 25px 0;
+    border-top: 1px dashed #ebdff0;
+    padding-top: 30px;
+}
+
+.lookbook-title h2 { 
+    color: #4A154B; 
+}
+
+.lookbook-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.lookbook-item {
     border-radius: 8px;
+    overflow: hidden;
     border: 1px solid #ebdff0;
+    height: 250px;
 }
 
-.direct-wa-btn {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    background-color: #075E54;
-    color: white;
-    padding: 14px;
-    font-weight: 700;
-    border-radius: 4px;
-}
-
-.divider {
-    text-align: center;
-    margin: 25px 0;
-    font-size: 12px;
-    color: #a38fa6;
-    letter-spacing: 1px;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 5px;
-    font-size: 14px;
-}
-
-.form-group input, .form-group textarea {
+.lookbook-item img {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #cbd5e1;
-    border-radius: 4px;
+    height: 100%;
+    object-fit: cover;
 }
 
-.send-btn {
-    background-color: #4A154B;
-    color: white;
-    border: none;
-    width: 100%;
-    padding: 12px;
-    font-weight: 700;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-/* --- DEVELOPER FOOTER STYLING --- */
+/* Developer Footer Styling */
 .site-footer {
     text-align: center;
     padding: 25px 20px;
@@ -274,11 +453,17 @@ body {
     color: #8A2387; 
 }
 
-/* CRITICAL RESPONSIVE MEDIA QUERY */
+/* Responsive Media Queries */
 @media (max-width: 768px) {
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
+    }
+    .lookbook-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contact-split-grid {
+        grid-template-columns: 1fr;
     }
     .image-wrapper {
         height: 180px; 
